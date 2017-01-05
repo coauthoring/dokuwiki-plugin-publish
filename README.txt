@@ -9,8 +9,8 @@ Modify:  Modified in action/approve.php
 Usage:   set configuration below in conf/local.php (Please manually
          add those code.)
 -----
-$conf['debuglogfile'] = '/path/to/dokuwiki/log/debuglog.txt';
-$conf['copybeforeapprove'] = '/path/to/dokuwiki/data'; //data directory path without "/"
+$conf['debuglogfile'] = '/path/to/dokuwiki/log/debuglog.txt'; //log file
+$conf['copybeforeapprove'] = '/path/to/second-dokuwiki/data'; //copy distination dokuwiki's data directory path without "/"
 $conf['isdebugging'] = true; //set false if you do not need the log.
 $conf['iscopyremote'] = false; //set true if you use ftp for remote site
 $conf['ftp_server'] = 'dokuwiki.my-remote-site.com';

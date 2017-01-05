@@ -95,10 +95,10 @@ class action_plugin_publish_approve extends DokuWiki_Action_Plugin {
         );
 
         /* contents copy hack */
+        global $conf;
         if($conf['isdebugging']){
           file_put_contents($conf['debuglogfile'],"------\n",FILE_APPEND);//debug
         }
-        global $conf;
         $iscopysuccess=false;
         $iscopysuccess2=false;
         $iscopysuccess3=false;
@@ -120,13 +120,13 @@ class action_plugin_publish_approve extends DokuWiki_Action_Plugin {
         $frompagefn = wikiFN($ID);
         $pagetitle = noNS($ID);
         $namespace = getNS($ID);
-        $distmetadir=$conf['copybeforeapprove']."/data/meta/".(strlen($namespace)>0?$namespace."/":"");
-        $distatticdir=$conf['copybeforeapprove']."/data/attic/".(strlen($namespace)>0?$namespace."/":"");
+        $distmetadir=$conf['copybeforeapprove']."/meta/".(strlen($namespace)>0?$namespace."/":"");
+        $distatticdir=$conf['copybeforeapprove']."/attic/".(strlen($namespace)>0?$namespace."/":"");
         $distmetafn=$pagetitle.".meta";
         $changesfn=$pagetitle.".changes";
         $atticfn=$pagetitle.".".$cpfrev[0].".txt.gz";
         $fromatticfn=wikiFN($ID,$cpfrev[0]);
-        $distpagedir=$conf['copybeforeapprove']."/data/pages/".(strlen($namespace)>0?$namespace."/":"");
+        $distpagedir=$conf['copybeforeapprove']."/pages/".(strlen($namespace)>0?$namespace."/":"");
         $distpagefn=$pagetitle.".txt";
 
         $conn_id = null;
