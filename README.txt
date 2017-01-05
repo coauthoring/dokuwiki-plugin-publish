@@ -1,8 +1,7 @@
 Plug-in to allow simple page approval process.
 
 2017-1-5 coauthoring
-Purpose: Introducing hierarchical approval process and/or
-         more secure internal draft protection.
+Purpose: Introducing hierarchical approval process.
 Feature: Allowing this plugin copying an approved page to
          a specified other dokuwiki (e.g. public site to internet)
 Modify:  Modified in action/approve.php
